@@ -5,6 +5,7 @@ import GlassCard from '@/components/ui/glass-card';
 import MetallicButton from '@/components/ui/metallic-button';
 import { supabase } from '@/lib/supabase';
 import { useRouter } from 'next/navigation';
+import UrgencyTimer from '@/components/neuromarketing/urgency-timer';
 
 export default function InvestmentCalculator({ userId, minAmount = 1 }: { userId: string, minAmount?: number }) {
     const router = useRouter();
@@ -59,6 +60,8 @@ export default function InvestmentCalculator({ userId, minAmount = 1 }: { userId
             <h2 className="text-2xl font-bold text-white mb-6 text-center">
                 Nueva Inversión
             </h2>
+
+            <UrgencyTimer durationMinutes={120} bonusPercentage={5} />
 
             <div className="mb-8 px-4">
                 <label className="block text-gray-400 mb-4 text-center">

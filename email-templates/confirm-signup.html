@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirma tu cuenta - GoldSeed</title>
+</head>
+
+<body
+    style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #0a0a0a;">
+    <table role="presentation" style="width: 100%; border-collapse: collapse;">
+        <tr>
+            <td align="center" style="padding: 40px 20px;">
+                <!-- Main Container -->
+                <table role="presentation"
+                    style="max-width: 600px; width: 100%; background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%); border-radius: 16px; overflow: hidden; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);">
+
+                    <!-- Header with Gold Accent -->
+                    <tr>
+                        <td style="background: linear-gradient(90deg, #d4af37 0%, #f4d03f 100%); padding: 3px 0;"></td>
+                    </tr>
+
+                    <!-- Logo Section -->
+                    <tr>
+                        <td align="center" style="padding: 40px 20px 20px;">
+                            <h1
+                                style="margin: 0; font-size: 36px; font-weight: 800; background: linear-gradient(135deg, #d4af37 0%, #f4d03f 50%, #d4af37 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; letter-spacing: 2px;">
+                                GoldSeed
+                            </h1>
+                            <p
+                                style="margin: 8px 0 0; color: #888; font-size: 12px; text-transform: uppercase; letter-spacing: 3px;">
+                                Tu camino a la libertad financiera
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!-- Content -->
+                    <tr>
+                        <td style="padding: 20px 40px;">
+                            <h2 style="color: #ffffff; font-size: 24px; margin: 0 0 20px; font-weight: 600;">
+                                ¡Bienvenido a GoldSeed! 🌱
+                            </h2>
+
+                            <p style="color: #cccccc; font-size: 16px; line-height: 1.6; margin: 0 0 24px;">
+                                Estás a un paso de comenzar tu viaje hacia el crecimiento financiero. Solo necesitamos
+                                confirmar tu dirección de correo electrónico.
+                            </p>
+
+                            <!-- CTA Button -->
+                            <table role="presentation" style="margin: 32px 0;">
+                                <tr>
+                                    <td align="center">
+                                        <a href="{{ .ConfirmationURL }}"
+                                            style="display: inline-block; padding: 16px 48px; background: linear-gradient(135deg, #d4af37 0%, #f4d03f 100%); color: #000000; text-decoration: none; font-weight: 700; font-size: 16px; border-radius: 12px; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 8px 24px rgba(212, 175, 55, 0.3);">
+                                            Confirmar mi cuenta
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <p
+                                style="color: #888888; font-size: 14px; line-height: 1.6; margin: 24px 0 0; padding: 20px; background: rgba(255, 255, 255, 0.03); border-radius: 8px; border-left: 3px solid #d4af37;">
+                                <strong style="color: #d4af37;">💡 Consejo:</strong> Si no solicitaste esta cuenta,
+                                puedes ignorar este correo de forma segura.
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!-- Footer -->
+                    <tr>
+                        <td style="padding: 30px 40px; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+                            <p style="color: #666666; font-size: 12px; line-height: 1.6; margin: 0 0 8px;">
+                                Este enlace expirará en 24 horas por seguridad.
+                            </p>
+                            <p style="color: #666666; font-size: 12px; line-height: 1.6; margin: 0;">
+                                © 2026 GoldSeed. Todos los derechos reservados.
+                            </p>
+                        </td>
+                    </tr>
+
+                </table>
+
+                <!-- Unsubscribe Link -->
+                <p style="color: #555555; font-size: 11px; margin: 20px 0 0; text-align: center;">
+                    <a href="{{ .SiteURL }}" style="color: #888888; text-decoration: none;">Visitar GoldSeed</a>
+                </p>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

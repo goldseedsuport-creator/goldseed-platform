@@ -34,3 +34,26 @@ export interface Withdrawal {
     admin_note?: string;
     created_at: string;
 }
+
+export interface ReferralTracking {
+    id: string;
+    referrer_id: string;
+    referred_user_id: string;
+    registered_at: string;
+    first_investment_at?: string;
+    first_investment_amount: number;
+    total_investments: number;
+    total_investment_count: number;
+    status: 'registered' | 'invested' | 'active';
+    created_at: string;
+    updated_at: string;
+}
+
+export interface ReferralStats {
+    referrer_id: string;
+    total_referrals: number;
+    registered_only: number;
+    invested_count: number;
+    total_referred_investments: number;
+    conversion_rate: number;
+}
