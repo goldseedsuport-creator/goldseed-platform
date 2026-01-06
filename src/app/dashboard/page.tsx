@@ -7,6 +7,7 @@ import InvestmentCalculator from '@/components/dashboard/investment-calculator';
 import ActiveInvestment from '@/components/dashboard/active-investment';
 import GlassCard from '@/components/ui/glass-card';
 import ReferralCard from '@/components/dashboard/referral-card';
+import BalloonText from '@/components/ui/balloon-text';
 import MetallicButton from '@/components/ui/metallic-button';
 import FullscreenLoader from '@/components/ui/fullscreen-loader';
 import { useRouter } from 'next/navigation';
