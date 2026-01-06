@@ -187,13 +187,13 @@ export default function DashboardPage() {
 
             {/* Referral Card - Middle Priority */}
             {user && (
-                <div className="animate-fade-in" style={{ animationDelay: '0.1s' }}>
+                <div className="animate-fade-in">
                     <ReferralCard user={user} />
                 </div>
             )}
 
             {/* Stats Row - Bottom (Informational) */}
-            <div className="grid md:grid-cols-3 gap-6 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <div className="grid md:grid-cols-3 gap-6 animate-fade-in">
                 <GlassCard className="hover:border-gold-500/40 transition-all duration-300">
                     <div className="text-gray-400 text-xs uppercase tracking-wider mb-2">Total Invertido</div>
                     <div className="text-3xl font-bold text-gold-400">
