@@ -65,16 +65,39 @@ export default function InvestmentCalculator({ userId, minAmount = 1 }: { userId
                     Desliza para seleccionar tu inversión
                 </label>
 
-                <div className="relative mb-6">
-                    <input
-                        type="range"
-                        min={Math.max(1, minAmount)}
-                        max="10000"
-                        step="1"
-                        value={amount}
-                        onChange={(e) => setAmount(Number(e.target.value))}
-                        className="w-full h-3 bg-dark-800 rounded-lg appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-8 [&::-webkit-slider-thumb]:w-8 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-gold-500 [&::-webkit-slider-thumb]:shadow-[0_0_20px_rgba(255,215,0,0.5)] transition-all"
-                    />
+                <div className="flex items-center gap-4 mb-6">
+                    {/* Decrement Button */}
+                    <button
+                        type="button"
+                        onClick={() => setAmount(Math.max(Math.max(1, minAmount), amount - 1))}
+                        className="flex-shrink-0 w-12 h-12 rounded-full bg-dark-800 border border-gold-500/30 text-gold-400 text-2xl font-bold hover:bg-gold-500/10 hover:border-gold-500 transition-all active:scale-95 disabled:opacity-30 disabled:cursor-not-allowed"
+                        disabled={amount <= Math.max(1, minAmount)}
+                    >
+                        −
+                    </button>
+
+                    {/* Slider */}
+                    <div className="relative flex-1">
+                        <input
+                            type="range"
+                            min={Math.max(1, minAmount)}
+                            max="10000"
+                            step="1"
+                            value={amount}
+                            onChange={(e) => setAmount(Number(e.target.value))}
+                            className="w-full h-3 bg-dark-800 rounded-lg appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-8 [&::-webkit-slider-thumb]:w-8 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-gold-500 [&::-webkit-slider-thumb]:shadow-[0_0_20px_rgba(255,215,0,0.5)] transition-all"
+                        />
+                    </div>
+
+                    {/* Increment Button */}
+                    <button
+                        type="button"
+                        onClick={() => setAmount(Math.min(10000, amount + 1))}
+                        className="flex-shrink-0 w-12 h-12 rounded-full bg-dark-800 border border-gold-500/30 text-gold-400 text-2xl font-bold hover:bg-gold-500/10 hover:border-gold-500 transition-all active:scale-95 disabled:opacity-30 disabled:cursor-not-allowed"
+                        disabled={amount >= 10000}
+                    >
+                        +
+                    </button>
                 </div>
 
                 <div className="flex justify-between items-center text-lg font-medium">
